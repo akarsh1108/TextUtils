@@ -26,14 +26,14 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor='#042743';
       showAlert("Dark mode has been enabled","success");
-      document.title = 'TextUtils - Dark Mode';
+      // document.title = 'TextUtils - Dark Mode';
     }
     else
     {
       setMode('light');
       document.body.style.backgroundColor='white'
       showAlert("Light mode has been enabled","success");
-      document.title = 'TextUtils - Light Mode'
+      // document.title = 'TextUtils - Light Mode'
     }
   }
   return (
@@ -45,8 +45,8 @@ function App() {
         
         {/* We use exact because it does partial matching if we don't use example users/ users/home it will always give 1  even if we use second statement */}
       <Routes>
-        <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to Analyse" mode={mode} />} />
-        <Route exact path="/about" element={<About />} />
+        <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter , Character Counter , Remove extra speces " mode={mode} />} />
+        <Route exact path="/about" element={<About mode={mode}/>} />
       </Routes>
       </div>
       </BrowserRouter>
